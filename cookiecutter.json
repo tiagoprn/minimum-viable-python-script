@@ -1,5 +1,5 @@
 {
-    "project_slug": "minimal_viable_flask",
-    "project_name": "minimal-viable-flask-project",
-    "description": "This is a minimal viable flask project, that provides a simple API."
+    "project_name": "awesome-python-script",
+    "package_name": "awesome_python_script",
+    "description": "This is a minimal viable python script, that relies solely on python's standard library."
 }
