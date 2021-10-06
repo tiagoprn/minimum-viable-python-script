@@ -1,16 +1,12 @@
-# chrono-utils
+# {{ cookiecutter.project_name }}
 
-## filter
+
+## sample script
 
 Given timestamped records on stdin, prints on stdout the ones that will happen in the near future, taking the current timestamp as a reference.
 
-[Here](https://github.com/tiagoprn/chrono-utils/blob/88f7df6cd61df7a2afd3f7932acde41c95e95001/Makefile#L49) is an example on how to use it. Check also [tests for more scenarios](https://github.com/tiagoprn/chrono-utils/blob/master/{{ cookiecutter.package_name }}/tests/test_sample_script.py).
+You can use the script standalone on any python3 installation, since it does not require any third party dependency.
 
-You can use the main script standalone on any python3 installation, since it does not require any third party dependency. To do that, you can simply download it with curl:
-
-```
-curl https://raw.githubusercontent.com/tiagoprn/chrono-utils/master/{{ cookiecutter.package_name }}/sample_script.py -o sample_script.py
-```
 
 # Setting up the development environment
 
@@ -33,9 +29,19 @@ make shell
 make requirements
 ```
 
+8. To validate the development environment is working, run the commands below:
+
+```
+$ make style-check
+$ make lint
+$ make test
+$ make run
+```
+
+
 # Notes
 
 - To supress "Entering Directory" messages when running make commands, run the command with `make -s` ("-s" means "silent"). e.g.: `make -s run`
 
-- To understand a little more about poetry, you can check [this note of mine](https://tiagopr.nl/posts/published/using-poetry-for-dependencies-on-python-projects/).
+- To understand a little more about poetry, you can check [this note](https://tiagopr.nl/posts/published/using-poetry-for-dependencies-on-python-projects/).
 
