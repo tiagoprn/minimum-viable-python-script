@@ -3,7 +3,7 @@ from datetime import datetime
 import pytest
 import time_machine
 
-from chrono_utils.filter_time_records import (
+from {{ cookiecutter.package_name }}.filter_time_records import (
     _filter_records,
     _get_datetime_instance_from_12_hours_format,
 )

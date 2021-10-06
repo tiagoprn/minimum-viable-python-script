@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "chrono_utils"
+name = "{{ cookiecutter.package_name }}"
 version = "0.1.0"
 description = ""
 authors = ["tiago.paranhos <tiagoprn@gmail.com>"]
