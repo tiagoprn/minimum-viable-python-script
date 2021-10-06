@@ -46,6 +46,6 @@ coverage: clean  ## Run the test coverage report
 	@py.test --cov-config .coveragerc --cov $(PROJECT_NAME) $(PROJECT_NAME) --cov-report term-missing
 
 run: ## Run the script on the sample file as input
-	@cat sample-inputs/filter_time_records.txt | {{ cookiecutter.package_name }}/filter_time_records.py 3
+	@cat sample-inputs/sample_script.txt | {{ cookiecutter.package_name }}/sample_script.py 3
 
 

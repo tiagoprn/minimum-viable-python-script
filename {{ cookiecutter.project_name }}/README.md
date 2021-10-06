@@ -4,12 +4,12 @@
 
 Given timestamped records on stdin, prints on stdout the ones that will happen in the near future, taking the current timestamp as a reference.
 
-[Here](https://github.com/tiagoprn/chrono-utils/blob/88f7df6cd61df7a2afd3f7932acde41c95e95001/Makefile#L49) is an example on how to use it. Check also [tests for more scenarios](https://github.com/tiagoprn/chrono-utils/blob/master/{{ cookiecutter.package_name }}/tests/test_filter_time_records.py).
+[Here](https://github.com/tiagoprn/chrono-utils/blob/88f7df6cd61df7a2afd3f7932acde41c95e95001/Makefile#L49) is an example on how to use it. Check also [tests for more scenarios](https://github.com/tiagoprn/chrono-utils/blob/master/{{ cookiecutter.package_name }}/tests/test_sample_script.py).
 
 You can use the main script standalone on any python3 installation, since it does not require any third party dependency. To do that, you can simply download it with curl:
 
 ```
-curl https://raw.githubusercontent.com/tiagoprn/chrono-utils/master/{{ cookiecutter.package_name }}/filter_time_records.py -o filter_time_records.py
+curl https://raw.githubusercontent.com/tiagoprn/chrono-utils/master/{{ cookiecutter.package_name }}/sample_script.py -o sample_script.py
 ```
 
 # Setting up the development environment

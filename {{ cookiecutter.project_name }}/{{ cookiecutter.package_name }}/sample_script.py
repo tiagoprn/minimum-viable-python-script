@@ -11,7 +11,7 @@ separated by a newline.
 
 e.g.
 
-$ cat ../sample_input.txt | ./filter_time_records.py 3
+$ cat ../sample_input.txt | ./sample_script.py 3
 
 This will show the next 3 records that will happen in the near future
 (taking the current timestamp as the time reference).
