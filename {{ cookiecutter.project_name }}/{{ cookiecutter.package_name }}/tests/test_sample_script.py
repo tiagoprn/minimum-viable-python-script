@@ -1,73 +1,27 @@
-from datetime import datetime
+# from datetime import datetime
 
 import pytest
 import time_machine
 
-from {{ cookiecutter.package_name }}.sample_script import (
-    _filter_records,
-    _get_datetime_instance_from_12_hours_format,
-)
+from awesome_python_script.sample_script import greet
 
 
 @pytest.mark.parametrize(
-    'fake_current_datetime,hour,expected_datetime',
+    "name,fake_current_datetime,time",
     [
-        ['2021-01-01T08:00', '9:00am', '2021-01-01T09:00'],
-        ['2021-01-01T08:00', '1:00pm', '2021-01-01T13:00'],
-        ['2021-01-01T08:00', '12:00am', '2021-01-01T00:00'],
-        ['2021-01-01T08:00', '12:00pm', '2021-01-01T12:00'],
+        ["Hal Jordan", "2021-01-01 05:59", "night"],
+        ["Hal Jordan", "2021-01-01 06:00", "morning"],
+        ["Hal Jordan", "2021-01-01 11:59", "morning"],
+        ["Hal Jordan", "2021-01-01 12:00", "afternoon"],
+        ["Hal Jordan", "2021-01-01 17:59", "afternoon"],
+        ["Hal Jordan", "2021-01-01 18:00", "night"],
+        ["Hal Jordan", "2021-01-01 18:01", "night"],
+        ["Hal Jordan", "2021-01-01 23:59", "night"],
+        ["Hal Jordan", "2021-01-01 00:00", "night"],
     ],
 )
-def test_get_datetime_instance_from_12_hours_format(
-    fake_current_datetime, hour, expected_datetime
-):
+def test_greet(name, fake_current_datetime, time):
     with time_machine.travel(fake_current_datetime, tick=False):
-        datetime_instance = _get_datetime_instance_from_12_hours_format(hour)
-        expected_datetime_instance = datetime.fromisoformat(expected_datetime)
-        assert datetime_instance == expected_datetime_instance
-
-
-@pytest.mark.parametrize(
-    'fake_current_datetime,expected_filtered_records,number_of_records',
-    [
-        [
-            '2021-01-01T00:00',
-            ['5:00am 01', '7:59am 02', '8:00am 03', '8:01am 04', '1:00pm 05'],
-            5,
-        ],
-        ['2021-01-01T05:00', ['5:00am 01'], 1],
-        ['2021-01-01T05:00', ['5:00am 01', '7:59am 02', '8:00am 03'], 3],
-        [
-            '2021-01-01T05:00',
-            ['5:00am 01', '7:59am 02', '8:00am 03', '8:01am 04', '1:00pm 05'],
-            5,
-        ],
-        [
-            '2021-01-01T08:00',
-            ['7:59am 02', '8:00am 03', '8:01am 04', '1:00pm 05'],
-            3,
-        ],
-        ['2021-01-01T13:59', ['1:00pm 05', '2:00pm 06'], 1],
-        ['2021-01-01T13:59', ['1:00pm 05', '2:00pm 06'], 3],
-        ['2021-01-01T13:59', ['1:00pm 05', '2:00pm 06'], 5],
-        ['2021-01-01T14:00', ['1:00pm 05', '2:00pm 06'], 1],
-        ['2021-01-01T14:00', ['1:00pm 05', '2:00pm 06'], 3],
-        ['2021-01-01T14:00', ['1:00pm 05', '2:00pm 06'], 5],
-        ['2021-01-01T14:01', [], 3],
-    ],
-)
-def test_filter_records(
-    fake_current_datetime, expected_filtered_records, number_of_records
-):
-    with time_machine.travel(fake_current_datetime, tick=False):
-        records = [
-            '5:00am 01',
-            '7:59am 02',
-            '8:00am 03',
-            '8:01am 04',
-            '1:00pm 05',
-            '2:00pm 06',
-        ]
-
-        filtered_records = _filter_records(records, number_of_records)
-        assert filtered_records == expected_filtered_records
+        result = greet(name)
+        expected_result = f"Hello {name}! Have a good {time}!"
+        assert result == expected_result

@@ -1,14 +1,8 @@
 # {{ cookiecutter.project_name }}
 
+{{ cookiecutter.description }}
 
-## sample script
-
-Given timestamped records on stdin, prints on stdout the ones that will happen in the near future, taking the current timestamp as a reference.
-
-You can use the script standalone on any python3 installation, since it does not require any third party dependency.
-
-
-# Setting up the development environment
+## Setting up the development environment
 
 1. Make sure you have pyenv installed. If not, install it.
 
@@ -16,7 +10,10 @@ You can use the script standalone on any python3 installation, since it does not
 
 3. After installing pipx, run: `pipx install poetry`
 
-4. Create and enter a folder with the project's name, where you will use pyenv to define the python version that will be used by poetry to automatically create the virtualenv: `pyenv local 3.9.1`
+4. Create and enter a folder with the project's name, where you will use pyenv to define the python version that will be used by poetry to automatically create the virtualenv:
+```bash
+pyenv local 3.9.1
+```
 
 5. Clone this repository with git clone
 
@@ -24,14 +21,14 @@ You can use the script standalone on any python3 installation, since it does not
 
 7. Run the following commands to setup the development environment:
 
-```
+```bash
 make shell
 make requirements
 ```
 
 8. To validate the development environment is working, run the commands below:
 
-```
+```bash
 $ make style-check
 $ make lint
 $ make test

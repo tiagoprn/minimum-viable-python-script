@@ -32,7 +32,7 @@ style-check:  ## Run isort and black check code style
 	@echo 'isort check...'
 	@isort -v --check -m 3 --trailing-comma --use-parentheses --honor-noqa --color .
 	@echo 'black check...'
-	@black -S -t py37 -l 79 --check $(PROJECT_NAME)/. --exclude '/(\.git|\.venv|env|build|dist)/'
+	@black -S -t py39 -l 79 --check $(PROJECT_NAME)/. --exclude '/(\.git|\.venv|env|build|dist)/'
 
 lint:  ## Run the linter to enforce our coding practices
 	@printf '\n --- \n >>> Running linter...<<<\n'
@@ -46,6 +46,4 @@ coverage: clean  ## Run the test coverage report
 	@py.test --cov-config .coveragerc --cov $(PROJECT_NAME) $(PROJECT_NAME) --cov-report term-missing
 
 run: ## Run the script on the sample file as input
-	@cat sample-inputs/sample_script.txt | {{ cookiecutter.package_name }}/sample_script.py 3
-
-
+	@python {{ cookiecutter.package_name }}/sample_script.py "Hal Jordan"
