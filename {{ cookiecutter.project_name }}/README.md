@@ -6,7 +6,11 @@
 
 1. Make sure you have pyenv installed. If not, install it.
 
-2. Install pipx on your python distribution using the system's installed python (generally python3). With pipx you can install python utilities on isolated environments, which fits perfectly to install poetry. To install it: `sudo pip3 instal pipx`
+2. Install pipx on your python distribution. (e.g. Ubuntu):
+
+`$ sudo apt install pipx`
+
+With pipx you can install python utilities on isolated environments, which fits perfectly to install poetry.
 
 3. After installing pipx, run: `pipx install poetry`
 
