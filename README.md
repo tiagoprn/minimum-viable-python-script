@@ -1,6 +1,6 @@
 # minimum-viable-python-script
 
-This project is a minimalistic template that can be used as a base to develop a simple python script that interacts with stdin to take part e.g. on shell pipes.
+This project is a minimalistic template that can be used as a base to develop a simple pure python script to run on the CLI.
 
 
 ## Features
