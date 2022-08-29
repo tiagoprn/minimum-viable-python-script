@@ -16,7 +16,7 @@ With pipx you can install python utilities on isolated environments, which fits 
 
 4. Create and enter a folder with the project's name, where you will use pyenv to define the python version that will be used by poetry to automatically create the virtualenv:
 ```bash
-pyenv local 3.9.1
+pyenv local 3.10.4
 ```
 
 5. Clone this repository with git clone
