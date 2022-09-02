@@ -6,7 +6,7 @@
 
 # Files or directories to be skipped. They should be base names, not
 # paths.
-ignore=third_party,db.sqlite3,migrations
+ignore=CVS
 
 # Add files or directories matching the regex patterns to the ignore-list. The
 # regex matches against paths and can be in Posix or Windows format.
@@ -14,10 +14,10 @@ ignore-paths=
 
 # Files or directories matching the regex patterns are skipped. The regex
 # matches against base names, not paths.
-ignore-patterns=(^celerybeat)
+ignore-patterns=^\.#
 
 # Pickle collected data for later comparisons.
-persistent=no
+persistent=yes
 
 # List of plugins (as comma separated values of python modules names) to load,
 # usually to register additional checkers.
@@ -35,7 +35,7 @@ load-plugins=
 
 # Use multiple processes to speed up Pylint. Specifying 0 will auto-detect the
 # number of processors available to use.
-jobs=0
+jobs=1
 
 # When enabled, pylint would attempt to guess common misconfiguration and emit
 # user-friendly hints instead of false-positive error messages.
