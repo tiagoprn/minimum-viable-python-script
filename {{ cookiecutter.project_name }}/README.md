@@ -55,5 +55,5 @@ $ git commit -m 'feat: boostrapping project from cookiecutter'
 
 - To supress "Entering Directory" messages when running make commands, run the command with `make -s` ("-s" means "silent"). e.g.: `make -s run`
 
-- To understand a little more about poetry, you can check [this note](https://tiagopr.nl/posts/published/using-poetry-for-dependencies-on-python-projects/).
+- To understand a little more about poetry, you can check [this note on my site](https://writeloop.dev/posts/2022-05-05-085202-814/).
 
