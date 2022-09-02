@@ -19,11 +19,11 @@ With pipx you can install python utilities on isolated environments, which fits 
 pyenv local 3.10.4
 ```
 
-5. Clone this repository with git clone
+5. If you have already cloned this repository or just created this repository from [minimum-viable-python-script cookiecutter](https://github.com/tiagoprn/minimum-viable-python-script), ignore this. Otherwise:
+A. Clone this repository with git clone
+B. Enter the cloned repository folder
 
-6. Enter the cloned repository folder
-
-7. Run the following commands to setup the development environment:
+6. Run the following commands to setup the development environment:
 
 ```bash
 make shell
@@ -31,7 +31,7 @@ make requirements
 make style  # this will fix any style issues that may happen if e.g. your script name is too big or small
 ```
 
-8. To validate the development environment is working, run the commands below:
+7. To validate the development environment is working, run the commands below:
 
 ```bash
 $ make style-check
@@ -42,7 +42,7 @@ $ make run
 
 Type `make` on the project folder to get a description of each one of the make commands above, and to see other ones available.
 
-9. If you have just cloned this repository or if it is already on version control, ignore this step. If you have just created this repository from [minimum-viable-python-script cookiecutter](https://github.com/tiagoprn/minimum-viable-python-script), now you can bootstrap version control on this repository to do your first commit and start coding your project:
+8. If you have just cloned this repository or if it is already on version control, ignore this step. If you have just created this repository from [minimum-viable-python-script cookiecutter](https://github.com/tiagoprn/minimum-viable-python-script), now you can bootstrap version control on this repository to do your first commit and start coding your project:
 
 ```bash
 $ git init
