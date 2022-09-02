@@ -2,8 +2,7 @@
 
 import pytest
 import time_machine
-
-from awesome_python_script.sample_script import greet
+from {{cookiecutter.package_name}}.sample_script import greet
 
 
 @pytest.mark.parametrize(
