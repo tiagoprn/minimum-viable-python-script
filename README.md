@@ -26,7 +26,6 @@ This project is a minimalistic template that can be used as a base to develop a 
 
 `$ sudo apt install cookiecutter`
 
-
 - Enter the folder where your want to create your script locally:
 
 `$ cd ~/projects/`
@@ -41,13 +40,4 @@ It will ask some questions (which have default values, case you are on a hurry) 
 
 `$ cd ~/projects/your_project_slug`
 
-- Create a local git repository to bootstrap version control:
-
-```
-$ git init
-$ git add .
-$ git commit -m 'Boostrapping project.'
-```
-
-- From then on, follow the instructions on `README.md` so that you can setup the development environment.
-
+- Now follow the instructions on the folder's `README.md` so that you can setup the development environment.

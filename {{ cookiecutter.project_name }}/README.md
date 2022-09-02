@@ -28,6 +28,7 @@ pyenv local 3.10.4
 ```bash
 make shell
 make requirements
+make style  # this will fix any style issues that may happen if e.g. your script name is too big or small
 ```
 
 8. To validate the development environment is working, run the commands below:
@@ -37,6 +38,16 @@ $ make style-check
 $ make lint
 $ make test
 $ make run
+```
+
+Type `make` on the project folder to get a description of each one of the make commands above, and to see other ones available.
+
+9. If you have just cloned this repository or if it is already on version control, ignore this step. If you have just created this repository from [minimum-viable-python-script cookiecutter](https://github.com/tiagoprn/minimum-viable-python-script), now you can bootstrap version control on this repository to do your first commit and start coding your project:
+
+```bash
+$ git init
+$ git add .
+$ git commit -m 'feat: boostrapping project from cookiecutter'
 ```
 
 
