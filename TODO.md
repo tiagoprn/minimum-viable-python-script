@@ -1,0 +1,3 @@
+- [ ] Remove the dependency to poetry 
+- [ ] Update the documentation with the recommended use of `uv run`
+- [ ] Insert the metadata header on the beginning of the script <https://github.com/tiagoprn/dot_files/blob/master/AI-prompts/system-prompts/python-script-compatible-with-uv-run.md#system_prompt>
